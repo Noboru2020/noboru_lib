@@ -1,11 +1,36 @@
 ---
 data:
-  libraryCategories: []
+  libraryCategories:
+  - name: graph/shortest-path
+    pages:
+    - icon: ':warning:'
+      path: graph/shortest-path/dijkstra.hpp
+      title: graph/shortest-path/dijkstra.hpp
+  - name: graph/template
+    pages:
+    - icon: ':warning:'
+      path: graph/template/weightedgraph.hpp
+      title: graph/template/weightedgraph.hpp
+  - name: verify-code/yosupojudge/graph
+    pages:
+    - icon: ':warning:'
+      path: verify-code/yosupojudge/graph/dijkstra-verify.cpp
+      title: verify-code/yosupojudge/graph/dijkstra-verify.cpp
+  - name: zatu
+    pages:
+    - icon: ':warning:'
+      path: zatu/benri.hpp
+      title: zatu/benri.hpp
+  - name: zatu/template
+    pages:
+    - icon: ':warning:'
+      path: zatu/template/template_func.hpp
+      title: zatu/template/template_func.hpp
   verificationCategories:
-  - name: .
+  - name: zatu
     pages:
     - icon: ':heavy_check_mark:'
-      path: example.test.cpp
-      title: example.test.cpp
+      path: zatu/example.test.cpp
+      title: zatu/example.test.cpp
 layout: toppage
 ---
