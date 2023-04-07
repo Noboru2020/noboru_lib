@@ -9,9 +9,6 @@ data:
     path: graph/template/weightedgraph.hpp
     title: graph/template/weightedgraph.hpp
   - icon: ':warning:'
-    path: verify-code/yosupojudge/graph/dijkstra-verify.cpp
-    title: verify-code/yosupojudge/graph/dijkstra-verify.cpp
-  - icon: ':warning:'
     path: zatu/benri.hpp
     title: zatu/benri.hpp
   _extendedVerifiedWith: []
@@ -50,10 +47,9 @@ data:
   isVerificationFile: false
   path: zatu/template/template_func.hpp
   requiredBy:
-  - zatu/benri.hpp
-  - verify-code/yosupojudge/graph/dijkstra-verify.cpp
-  - graph/template/weightedgraph.hpp
   - graph/shortest-path/dijkstra.hpp
+  - graph/template/weightedgraph.hpp
+  - zatu/benri.hpp
   timestamp: '2023-03-30 14:37:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []

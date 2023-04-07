@@ -11,11 +11,6 @@ data:
     - icon: ':warning:'
       path: graph/template/weightedgraph.hpp
       title: graph/template/weightedgraph.hpp
-  - name: verify-code/yosupojudge/graph
-    pages:
-    - icon: ':warning:'
-      path: verify-code/yosupojudge/graph/dijkstra-verify.cpp
-      title: verify-code/yosupojudge/graph/dijkstra-verify.cpp
   - name: zatu
     pages:
     - icon: ':warning:'
@@ -27,6 +22,11 @@ data:
       path: zatu/template/template_func.hpp
       title: zatu/template/template_func.hpp
   verificationCategories:
+  - name: verify-code/yosupojudge/graph
+    pages:
+    - icon: ':x:'
+      path: verify-code/yosupojudge/graph/dijkstra.test.cpp
+      title: verify-code/yosupojudge/graph/dijkstra.test.cpp
   - name: zatu
     pages:
     - icon: ':heavy_check_mark:'

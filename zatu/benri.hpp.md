@@ -11,20 +11,15 @@ data:
   - icon: ':warning:'
     path: graph/template/weightedgraph.hpp
     title: graph/template/weightedgraph.hpp
-  - icon: ':warning:'
-    path: verify-code/yosupojudge/graph/dijkstra-verify.cpp
-    title: verify-code/yosupojudge/graph/dijkstra-verify.cpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: '#line 2 "zatu/benri.hpp"
+  bundledCode: '#line 2 "zatu/template/template_func.hpp"
 
     #include<bits/stdc++.h>
-
-    #line 3 "zatu/template/template_func.hpp"
 
     template<typename T,typename U>
 
@@ -34,14 +29,12 @@ data:
 
     inline bool chmax(T &a,const U &b){return (a<b?a=b,true:false);}
 
-    #line 4 "zatu/benri.hpp"
+    #line 3 "zatu/benri.hpp"
 
     using ll = long long;
 
     '
   code: '#pragma once
-
-    #include<bits/stdc++.h>
 
     #include "template/template_func.hpp"
 
@@ -51,10 +44,9 @@ data:
   isVerificationFile: false
   path: zatu/benri.hpp
   requiredBy:
-  - verify-code/yosupojudge/graph/dijkstra-verify.cpp
-  - graph/template/weightedgraph.hpp
   - graph/shortest-path/dijkstra.hpp
-  timestamp: '2023-03-30 14:37:37+09:00'
+  - graph/template/weightedgraph.hpp
+  timestamp: '2023-04-07 23:55:36+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: zatu/benri.hpp
