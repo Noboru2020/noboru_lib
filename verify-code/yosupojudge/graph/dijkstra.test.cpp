@@ -3,8 +3,6 @@
 #include "../../../zatu/benri.hpp"
 using namespace std;
 int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
     int N,M,s,t;cin>>N>>M>>s>>t;
     graph_w<ll>WG(N),RG(N);
     for(int i=0;i<M;i++){
