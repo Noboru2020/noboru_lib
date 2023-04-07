@@ -13,7 +13,6 @@ int main(){
         RG[b].push_back(e);
     }
     vector<ll>D=dijkstra(WG,s);
-    cout<<D[t]<<endl;
     if(D[t]==9223372036854775807){
         puts("-1");return 0;
     }
