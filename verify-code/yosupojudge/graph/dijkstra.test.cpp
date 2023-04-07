@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/shortest_path"
-#include "noboru_lib/graph/shortest-path/dijkstra.hpp"
-#include "noboru_lib/zatu/benri.hpp"
+#include "../../../graph/shortest-path/dijkstra.hpp"
+#include "../../../zatu/benri.hpp"
 using namespace std;
 int main(){
     int N,M,s,t;cin>>N>>M>>s>>t;
