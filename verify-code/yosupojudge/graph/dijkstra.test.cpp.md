@@ -43,8 +43,8 @@ data:
     \nusing namespace std;\nint main(){\n    int N,M,s,t;cin>>N>>M>>s>>t;\n    graph_w<ll>WG(N),RG(N);\n\
     \    for(int i=0;i<M;i++){\n        int a,b;ll c;cin>>a>>b>>c;\n        weight_edge<ll>e(b,c);\n\
     \        WG[a].push_back(e);\n        e.to=a;\n        RG[b].push_back(e);\n \
-    \   }\n    vector<ll>D=dijkstra(WG,s);\n    cout<<D[t]<<endl;\n    if(D[t]==9223372036854775807){\n\
-    \        puts(\"-1\");return 0;\n    }\n    vector<pair<int,int>>ans;\n    vector<bool>seen(N,false);\n\
+    \   }\n    vector<ll>D=dijkstra(WG,s);\n    if(D[t]==9223372036854775807){\n \
+    \       puts(\"-1\");return 0;\n    }\n    vector<pair<int,int>>ans;\n    vector<bool>seen(N,false);\n\
     \    int nowv=t;\n    seen[nowv]=true;\n    while(nowv!=s){\n        for(auto\
     \ e:RG[nowv]){\n            if(!seen[e.to]&&D[e.to]+e.cost==D[nowv]){\n      \
     \          ans.push_back({e.to,nowv});\n                seen[e.to]=true;\n   \
@@ -56,8 +56,8 @@ data:
     \nusing namespace std;\nint main(){\n    int N,M,s,t;cin>>N>>M>>s>>t;\n    graph_w<ll>WG(N),RG(N);\n\
     \    for(int i=0;i<M;i++){\n        int a,b;ll c;cin>>a>>b>>c;\n        weight_edge<ll>e(b,c);\n\
     \        WG[a].push_back(e);\n        e.to=a;\n        RG[b].push_back(e);\n \
-    \   }\n    vector<ll>D=dijkstra(WG,s);\n    cout<<D[t]<<endl;\n    if(D[t]==9223372036854775807){\n\
-    \        puts(\"-1\");return 0;\n    }\n    vector<pair<int,int>>ans;\n    vector<bool>seen(N,false);\n\
+    \   }\n    vector<ll>D=dijkstra(WG,s);\n    if(D[t]==9223372036854775807){\n \
+    \       puts(\"-1\");return 0;\n    }\n    vector<pair<int,int>>ans;\n    vector<bool>seen(N,false);\n\
     \    int nowv=t;\n    seen[nowv]=true;\n    while(nowv!=s){\n        for(auto\
     \ e:RG[nowv]){\n            if(!seen[e.to]&&D[e.to]+e.cost==D[nowv]){\n      \
     \          ans.push_back({e.to,nowv});\n                seen[e.to]=true;\n   \
@@ -72,7 +72,7 @@ data:
   isVerificationFile: true
   path: verify-code/yosupojudge/graph/dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2023-04-08 00:06:57+09:00'
+  timestamp: '2023-04-08 00:20:00+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: verify-code/yosupojudge/graph/dijkstra.test.cpp
