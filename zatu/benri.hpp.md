@@ -1,25 +1,30 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: zatu/template/template_func.hpp
     title: zatu/template/template_func.hpp
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: graph/shortest-path/dijkstra.hpp
     title: graph/shortest-path/dijkstra.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: graph/template/weightedgraph.hpp
     title: graph/template/weightedgraph.hpp
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: verify-code/yosupojudge/graph/dijkstra.test.cpp
+    title: verify-code/yosupojudge/graph/dijkstra.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
-  bundledCode: '#line 2 "zatu/template/template_func.hpp"
+  bundledCode: '#line 2 "zatu/benri.hpp"
 
     #include<bits/stdc++.h>
+
+    #line 3 "zatu/template/template_func.hpp"
 
     template<typename T,typename U>
 
@@ -29,12 +34,14 @@ data:
 
     inline bool chmax(T &a,const U &b){return (a<b?a=b,true:false);}
 
-    #line 3 "zatu/benri.hpp"
+    #line 4 "zatu/benri.hpp"
 
     using ll = long long;
 
     '
   code: '#pragma once
+
+    #include<bits/stdc++.h>
 
     #include "template/template_func.hpp"
 
@@ -46,9 +53,10 @@ data:
   requiredBy:
   - graph/shortest-path/dijkstra.hpp
   - graph/template/weightedgraph.hpp
-  timestamp: '2023-04-07 23:55:36+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2023-04-08 00:06:57+09:00'
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - verify-code/yosupojudge/graph/dijkstra.test.cpp
 documentation_of: zatu/benri.hpp
 layout: document
 redirect_from:

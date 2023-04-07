@@ -1,26 +1,29 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: graph/template/weightedgraph.hpp
     title: graph/template/weightedgraph.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: zatu/benri.hpp
     title: zatu/benri.hpp
-  - icon: ':warning:'
+  - icon: ':x:'
     path: zatu/template/template_func.hpp
     title: zatu/template/template_func.hpp
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: verify-code/yosupojudge/graph/dijkstra.test.cpp
+    title: verify-code/yosupojudge/graph/dijkstra.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
-  bundledCode: "#line 2 \"zatu/template/template_func.hpp\"\n#include<bits/stdc++.h>\n\
-    template<typename T,typename U>\ninline bool chmin(T &a,const U &b){return (a>b?a=b,true:false);}\n\
+  bundledCode: "#line 2 \"zatu/benri.hpp\"\n#include<bits/stdc++.h>\n#line 3 \"zatu/template/template_func.hpp\"\
+    \ntemplate<typename T,typename U>\ninline bool chmin(T &a,const U &b){return (a>b?a=b,true:false);}\n\
     template<typename T,typename U>\ninline bool chmax(T &a,const U &b){return (a<b?a=b,true:false);}\n\
-    #line 3 \"zatu/benri.hpp\"\nusing ll = long long;\n#line 3 \"graph/template/weightedgraph.hpp\"\
+    #line 4 \"zatu/benri.hpp\"\nusing ll = long long;\n#line 3 \"graph/template/weightedgraph.hpp\"\
     \ntemplate<class T = int>struct weight_edge{\n    int from;\n    int to;\n   \
     \ T cost;\n    int idx;\n    weight_edge(int t,const T &c)\n    :to(t),cost(c){}\n\
     \    weight_edge(int f,int t,const T &c,int i=-1)\n    :from(f),to(t),cost(c),idx(i){}\n\
@@ -47,9 +50,10 @@ data:
   isVerificationFile: false
   path: graph/shortest-path/dijkstra.hpp
   requiredBy: []
-  timestamp: '2023-04-07 23:55:36+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2023-04-08 00:06:57+09:00'
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - verify-code/yosupojudge/graph/dijkstra.test.cpp
 documentation_of: graph/shortest-path/dijkstra.hpp
 layout: document
 redirect_from:
