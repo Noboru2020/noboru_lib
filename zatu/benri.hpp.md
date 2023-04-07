@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: zatu/template/template_func.hpp
     title: zatu/template/template_func.hpp
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/shortest-path/dijkstra.hpp
     title: graph/shortest-path/dijkstra.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/template/weightedgraph.hpp
     title: graph/template/weightedgraph.hpp
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: verify-code/yosupojudge/graph/dijkstra.test.cpp
     title: verify-code/yosupojudge/graph/dijkstra.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 2 "zatu/benri.hpp"
@@ -38,6 +38,8 @@ data:
 
     using ll = long long;
 
+    const ll llmx_0 = 1152921504606846976;
+
     '
   code: '#pragma once
 
@@ -45,7 +47,9 @@ data:
 
     #include "template/template_func.hpp"
 
-    using ll = long long;'
+    using ll = long long;
+
+    const ll llmx_0 = 1152921504606846976;'
   dependsOn:
   - zatu/template/template_func.hpp
   isVerificationFile: false
@@ -53,8 +57,8 @@ data:
   requiredBy:
   - graph/shortest-path/dijkstra.hpp
   - graph/template/weightedgraph.hpp
-  timestamp: '2023-04-08 00:06:57+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2023-04-08 01:09:00+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify-code/yosupojudge/graph/dijkstra.test.cpp
 documentation_of: zatu/benri.hpp
