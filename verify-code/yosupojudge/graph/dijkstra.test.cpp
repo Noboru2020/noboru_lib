@@ -13,7 +13,7 @@ int main(){
         RG[b].push_back(e);
     }
     vector<ll>D=dijkstra(WG,s);
-    if(D[t]==9223372036854775807){
+    if(D[t]==llmx_0){
         puts("-1");return 0;
     }
     vector<pair<int,int>>ans;

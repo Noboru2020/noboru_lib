@@ -4,7 +4,7 @@
 template<class T>std::vector<T>dijkstra(const graph_w<T>&G,int s=0){
     int N=G.size();
     assert(0<=s&&s<N);
-    std::vector<T>dis(N,INFINITY/10);
+    std::vector<T>dis(N,llmx_0);
     dis[s]=0;
     std::priority_queue<std::pair<T,int>,std::vector<std::pair<T,int>>,std::greater<std::pair<T,int>>>pq;
     pq.emplace(0,s);
