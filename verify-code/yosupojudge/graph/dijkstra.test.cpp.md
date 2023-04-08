@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/shortest-path/dijkstra.hpp
     title: graph/shortest-path/dijkstra.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: graph/template/weightedgraph.hpp
     title: graph/template/weightedgraph.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: zatu/benri.hpp
     title: zatu/benri.hpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: zatu/template/template_func.hpp
     title: zatu/template/template_func.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/shortest_path
@@ -29,8 +29,8 @@ data:
     \ T,typename U>\ninline bool chmin(T &a,const U &b){return (a>b?a=b,true:false);}\n\
     template<typename T,typename U>\ninline bool chmax(T &a,const U &b){return (a<b?a=b,true:false);}\n\
     #line 4 \"zatu/benri.hpp\"\nusing ll = long long;\nconst ll llmx_0 = 1152921504606846976;\n\
-    template<typename T>\nostream &operator<<(ostream &os,const vector<T>&v) {\n \
-    \   for(int i=0;i<(int)v.size();i++) {\n        os<<v[i]<<(i!=(int)v.size()-1?\"\
+    using namespace std;\ntemplate<typename T>\nostream &operator<<(ostream &os,const\
+    \ vector<T>&v) {\n    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i]<<(i!=(int)v.size()-1?\"\
     \ \" : \"\");\n    }\n    return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
     \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\n#line 3 \"graph/template/weightedgraph.hpp\"\
     \ntemplate<class T = int>struct weight_edge{\n    int from;\n    int to;\n   \
@@ -76,8 +76,8 @@ data:
   isVerificationFile: true
   path: verify-code/yosupojudge/graph/dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2023-04-08 20:37:44+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-04-08 20:40:30+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify-code/yosupojudge/graph/dijkstra.test.cpp
 layout: document
