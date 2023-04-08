@@ -3,6 +3,7 @@
 #include "template/template_func.hpp"
 using ll = long long;
 const ll llmx_0 = 1152921504606846976;
+using namespace std;
 template<typename T>
 ostream &operator<<(ostream &os,const vector<T>&v) {
     for(int i=0;i<(int)v.size();i++) {
