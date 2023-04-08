@@ -1,6 +1,6 @@
 #pragma once
 #include<bits/stdc++.h>
-#include "template/template_func.hpp"
+#include "/mnt/c/Users/haru2/OJtool/noboru_lib/zatu/template/template_func.hpp"
 using ll = long long;
 const ll llmx_0 = 1152921504606846976;
 using namespace std;
