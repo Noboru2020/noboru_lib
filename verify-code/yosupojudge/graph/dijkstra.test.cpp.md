@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/shortest-path/dijkstra.hpp
     title: graph/shortest-path/dijkstra.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: graph/template/weightedgraph.hpp
     title: graph/template/weightedgraph.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: zatu/benri.hpp
     title: zatu/benri.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: zatu/template/template_func.hpp
     title: zatu/template/template_func.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/shortest_path
@@ -29,11 +29,14 @@ data:
     \ T,typename U>\ninline bool chmin(T &a,const U &b){return (a>b?a=b,true:false);}\n\
     template<typename T,typename U>\ninline bool chmax(T &a,const U &b){return (a<b?a=b,true:false);}\n\
     #line 4 \"zatu/benri.hpp\"\nusing ll = long long;\nconst ll llmx_0 = 1152921504606846976;\n\
-    #line 3 \"graph/template/weightedgraph.hpp\"\ntemplate<class T = int>struct weight_edge{\n\
-    \    int from;\n    int to;\n    T cost;\n    int idx;\n    weight_edge(int t,const\
-    \ T &c)\n    :to(t),cost(c){}\n    weight_edge(int f,int t,const T &c,int i=-1)\n\
-    \    :from(f),to(t),cost(c),idx(i){}\n    operator int() const{return to;}\n};\n\
-    template<class T=int>using graph_w=std::vector<std::vector<weight_edge<T>>>;\n\
+    template<typename T>\nostream &operator<<(ostream &os,const vector<T>&v) {\n \
+    \   for(int i=0;i<(int)v.size();i++) {\n        os<<v[i]<<(i!=(int)v.size()-1?\"\
+    \ \" : \"\");\n    }\n    return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
+    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\n#line 3 \"graph/template/weightedgraph.hpp\"\
+    \ntemplate<class T = int>struct weight_edge{\n    int from;\n    int to;\n   \
+    \ T cost;\n    int idx;\n    weight_edge(int t,const T &c)\n    :to(t),cost(c){}\n\
+    \    weight_edge(int f,int t,const T &c,int i=-1)\n    :from(f),to(t),cost(c),idx(i){}\n\
+    \    operator int() const{return to;}\n};\ntemplate<class T=int>using graph_w=std::vector<std::vector<weight_edge<T>>>;\n\
     #line 4 \"graph/shortest-path/dijkstra.hpp\"\ntemplate<class T>std::vector<T>dijkstra(const\
     \ graph_w<T>&G,int s=0){\n    int N=G.size();\n    assert(0<=s&&s<N);\n    std::vector<T>dis(N,llmx_0);\n\
     \    dis[s]=0;\n    std::priority_queue<std::pair<T,int>,std::vector<std::pair<T,int>>,std::greater<std::pair<T,int>>>pq;\n\
@@ -73,8 +76,8 @@ data:
   isVerificationFile: true
   path: verify-code/yosupojudge/graph/dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2023-04-08 01:09:00+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-04-08 20:37:44+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: verify-code/yosupojudge/graph/dijkstra.test.cpp
 layout: document
