@@ -1,11 +1,23 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedRequiredBy:
+  - icon: ':heavy_check_mark:'
+    path: graph/shortest-path/dijkstra.hpp
+    title: graph/shortest-path/dijkstra.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/template/weightedgraph.hpp
+    title: graph/template/weightedgraph.hpp
+  - icon: ':heavy_check_mark:'
+    path: zatu/benri.hpp
+    title: zatu/benri.hpp
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify-code/yosupojudge/graph/dijkstra.test.cpp
+    title: verify-code/yosupojudge/graph/dijkstra.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 2 "zatu/template/template_func.hpp"
@@ -37,10 +49,14 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: zatu/template/template_func.hpp
-  requiredBy: []
+  requiredBy:
+  - graph/shortest-path/dijkstra.hpp
+  - graph/template/weightedgraph.hpp
+  - zatu/benri.hpp
   timestamp: '2023-03-30 14:37:37+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - verify-code/yosupojudge/graph/dijkstra.test.cpp
 documentation_of: zatu/template/template_func.hpp
 layout: document
 redirect_from:
