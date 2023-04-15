@@ -27,7 +27,7 @@ data:
     using namespace std;\ntemplate<typename T>\nostream &operator<<(ostream &os,const\
     \ vector<T>&v) {\n    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i]<<(i!=(int)v.size()-1?\"\
     \ \" : \"\");\n    }\n    return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
-    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\n#line 3 \"graph/template/weightedgraph.hpp\"\
+    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\n#line 3 \"graph/template/weighted_graph.hpp\"\
     \ntemplate<class T = int>struct weight_edge{\n    int from;\n    int to;\n   \
     \ T cost;\n    int idx;\n    weight_edge(int t,const T &c)\n    :to(t),cost(c){}\n\
     \    weight_edge(int f,int t,const T &c,int i=-1)\n    :from(f),to(t),cost(c),idx(i){}\n\
@@ -41,17 +41,17 @@ data:
   - zatu/benri.hpp
   - zatu/template/template_func.hpp
   isVerificationFile: false
-  path: graph/template/weightedgraph.hpp
+  path: graph/template/weighted_graph.hpp
   requiredBy:
   - graph/shortest-path/dijkstra.hpp
-  timestamp: '2023-04-09 13:40:17+09:00'
+  timestamp: '2023-04-16 00:09:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify-code/yosupojudge/graph/dijkstra.test.cpp
-documentation_of: graph/template/weightedgraph.hpp
+documentation_of: graph/template/weighted_graph.hpp
 layout: document
 redirect_from:
-- /library/graph/template/weightedgraph.hpp
-- /library/graph/template/weightedgraph.hpp.html
-title: graph/template/weightedgraph.hpp
+- /library/graph/template/weighted_graph.hpp
+- /library/graph/template/weighted_graph.hpp.html
+title: graph/template/weighted_graph.hpp
 ---

@@ -5,8 +5,8 @@ data:
     path: graph/shortest-path/dijkstra.hpp
     title: graph/shortest-path/dijkstra.hpp
   - icon: ':heavy_check_mark:'
-    path: graph/template/weightedgraph.hpp
-    title: graph/template/weightedgraph.hpp
+    path: graph/template/weighted_graph.hpp
+    title: graph/template/weighted_graph.hpp
   - icon: ':heavy_check_mark:'
     path: zatu/benri.hpp
     title: zatu/benri.hpp
@@ -32,7 +32,7 @@ data:
     using namespace std;\ntemplate<typename T>\nostream &operator<<(ostream &os,const\
     \ vector<T>&v) {\n    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i]<<(i!=(int)v.size()-1?\"\
     \ \" : \"\");\n    }\n    return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
-    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\n#line 3 \"graph/template/weightedgraph.hpp\"\
+    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\n#line 3 \"graph/template/weighted_graph.hpp\"\
     \ntemplate<class T = int>struct weight_edge{\n    int from;\n    int to;\n   \
     \ T cost;\n    int idx;\n    weight_edge(int t,const T &c)\n    :to(t),cost(c){}\n\
     \    weight_edge(int f,int t,const T &c,int i=-1)\n    :from(f),to(t),cost(c),idx(i){}\n\
@@ -70,13 +70,13 @@ data:
     \    for(auto [a,b]:ans)cout<<a<<\" \"<<b<<endl;\n}"
   dependsOn:
   - graph/shortest-path/dijkstra.hpp
-  - graph/template/weightedgraph.hpp
+  - graph/template/weighted_graph.hpp
   - zatu/benri.hpp
   - zatu/template/template_func.hpp
   isVerificationFile: true
   path: verify-code/yosupojudge/graph/dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2023-04-09 13:40:17+09:00'
+  timestamp: '2023-04-16 00:09:47+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: verify-code/yosupojudge/graph/dijkstra.test.cpp

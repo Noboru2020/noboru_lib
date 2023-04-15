@@ -9,8 +9,16 @@ data:
   - name: graph/template
     pages:
     - icon: ':heavy_check_mark:'
-      path: graph/template/weightedgraph.hpp
-      title: graph/template/weightedgraph.hpp
+      path: graph/template/no_weight_tree.hpp
+      title: graph/template/no_weight_tree.hpp
+    - icon: ':heavy_check_mark:'
+      path: graph/template/weighted_graph.hpp
+      title: graph/template/weighted_graph.hpp
+  - name: graph/tree
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: graph/tree/LowestCommonAncestor.hpp
+      title: graph/tree/LowestCommonAncestor.hpp
   - name: zatu
     pages:
     - icon: ':heavy_check_mark:'
@@ -24,6 +32,9 @@ data:
   verificationCategories:
   - name: verify-code/yosupojudge/graph
     pages:
+    - icon: ':heavy_check_mark:'
+      path: verify-code/yosupojudge/graph/LowestCommonAncestor.test.cpp
+      title: verify-code/yosupojudge/graph/LowestCommonAncestor.test.cpp
     - icon: ':heavy_check_mark:'
       path: verify-code/yosupojudge/graph/dijkstra.test.cpp
       title: verify-code/yosupojudge/graph/dijkstra.test.cpp

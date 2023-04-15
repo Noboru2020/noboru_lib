@@ -9,9 +9,18 @@ data:
     path: graph/shortest-path/dijkstra.hpp
     title: graph/shortest-path/dijkstra.hpp
   - icon: ':heavy_check_mark:'
-    path: graph/template/weightedgraph.hpp
-    title: graph/template/weightedgraph.hpp
+    path: graph/template/no_weight_tree.hpp
+    title: graph/template/no_weight_tree.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/template/weighted_graph.hpp
+    title: graph/template/weighted_graph.hpp
+  - icon: ':heavy_check_mark:'
+    path: graph/tree/LowestCommonAncestor.hpp
+    title: graph/tree/LowestCommonAncestor.hpp
   _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: verify-code/yosupojudge/graph/LowestCommonAncestor.test.cpp
+    title: verify-code/yosupojudge/graph/LowestCommonAncestor.test.cpp
   - icon: ':heavy_check_mark:'
     path: verify-code/yosupojudge/graph/dijkstra.test.cpp
     title: verify-code/yosupojudge/graph/dijkstra.test.cpp
@@ -39,11 +48,14 @@ data:
   isVerificationFile: false
   path: zatu/benri.hpp
   requiredBy:
+  - graph/tree/LowestCommonAncestor.hpp
   - graph/shortest-path/dijkstra.hpp
-  - graph/template/weightedgraph.hpp
+  - graph/template/no_weight_tree.hpp
+  - graph/template/weighted_graph.hpp
   timestamp: '2023-04-09 13:40:17+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
+  - verify-code/yosupojudge/graph/LowestCommonAncestor.test.cpp
   - verify-code/yosupojudge/graph/dijkstra.test.cpp
 documentation_of: zatu/benri.hpp
 layout: document

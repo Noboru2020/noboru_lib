@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: graph/template/weightedgraph.hpp
-    title: graph/template/weightedgraph.hpp
+    path: graph/template/weighted_graph.hpp
+    title: graph/template/weighted_graph.hpp
   - icon: ':heavy_check_mark:'
     path: zatu/benri.hpp
     title: zatu/benri.hpp
@@ -27,7 +27,7 @@ data:
     using namespace std;\ntemplate<typename T>\nostream &operator<<(ostream &os,const\
     \ vector<T>&v) {\n    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i]<<(i!=(int)v.size()-1?\"\
     \ \" : \"\");\n    }\n    return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
-    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\n#line 3 \"graph/template/weightedgraph.hpp\"\
+    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\n#line 3 \"graph/template/weighted_graph.hpp\"\
     \ntemplate<class T = int>struct weight_edge{\n    int from;\n    int to;\n   \
     \ T cost;\n    int idx;\n    weight_edge(int t,const T &c)\n    :to(t),cost(c){}\n\
     \    weight_edge(int f,int t,const T &c,int i=-1)\n    :from(f),to(t),cost(c),idx(i){}\n\
@@ -39,7 +39,7 @@ data:
     \        pq.pop();\n        if(dis[v]!=w)continue;\n        for(weight_edge we:G[v]){\n\
     \            if(chmin(dis[we.to],w+we.cost))pq.emplace(dis[we.to],we.to);\n  \
     \      }\n    }\n    return dis;\n}\n"
-  code: "#pragma once\n#include \"../template/weightedgraph.hpp\"\n#include \"../../zatu/benri.hpp\"\
+  code: "#pragma once\n#include \"../template/weighted_graph.hpp\"\n#include \"../../zatu/benri.hpp\"\
     \ntemplate<class T>std::vector<T>dijkstra(const graph_w<T>&G,int s=0){\n    int\
     \ N=G.size();\n    assert(0<=s&&s<N);\n    std::vector<T>dis(N,llmx_0);\n    dis[s]=0;\n\
     \    std::priority_queue<std::pair<T,int>,std::vector<std::pair<T,int>>,std::greater<std::pair<T,int>>>pq;\n\
@@ -48,13 +48,13 @@ data:
     \            if(chmin(dis[we.to],w+we.cost))pq.emplace(dis[we.to],we.to);\n  \
     \      }\n    }\n    return dis;\n}"
   dependsOn:
-  - graph/template/weightedgraph.hpp
+  - graph/template/weighted_graph.hpp
   - zatu/benri.hpp
   - zatu/template/template_func.hpp
   isVerificationFile: false
   path: graph/shortest-path/dijkstra.hpp
   requiredBy: []
-  timestamp: '2023-04-09 13:40:17+09:00'
+  timestamp: '2023-04-16 00:09:47+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify-code/yosupojudge/graph/dijkstra.test.cpp
