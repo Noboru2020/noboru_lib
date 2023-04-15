@@ -1,5 +1,5 @@
 #pragma once
-#include "../template/weightedgraph.hpp"
+#include "../template/weighted_graph.hpp"
 #include "../../zatu/benri.hpp"
 template<class T>std::vector<T>dijkstra(const graph_w<T>&G,int s=0){
     int N=G.size();
