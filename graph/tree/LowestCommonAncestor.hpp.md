@@ -27,8 +27,13 @@ data:
     using namespace std;\ntemplate<typename T>\nostream &operator<<(ostream &os,const\
     \ vector<T>&v) {\n    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i]<<(i!=(int)v.size()-1?\"\
     \ \" : \"\");\n    }\n    return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
-    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\n#line 3 \"graph/template/no_weight_tree.hpp\"\
-    \ntemplate<class T = int>struct no_weight_tree{\n    std::vector<std::vector<T>>no_weight_tree_graph;\n\
+    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\ntemplate<typename\
+    \ T,typename S>\nostream &operator<<(ostream &os,const vector<pair<T,S>>&v) {\n\
+    \    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i].first<<\" \"<<v[i].second<<endl;\n\
+    \    }\n    return os;\n}\ntemplate<typename T,typename S>\nistream &operator>>(istream\
+    \ &is,vector<pair<T,S>>&v) {\n    for(auto &in:v)is>>in.first>>in.second;\n  \
+    \  return is;\n}\n#line 3 \"graph/template/no_weight_tree.hpp\"\ntemplate<class\
+    \ T = int>struct no_weight_tree{\n    std::vector<std::vector<T>>no_weight_tree_graph;\n\
     \    no_weight_tree(int N):no_weight_tree_graph(N){};\n    void build__noweight_tree_input_edge(bool\
     \ one_indexed,bool twoway){\n        int M=no_weight_tree_graph.size();\n    \
     \    for(int i=0;i<M-1;i++){\n            int a,b;cin>>a>>b;\n            if(one_indexed){\n\
@@ -73,7 +78,7 @@ data:
   isVerificationFile: false
   path: graph/tree/LowestCommonAncestor.hpp
   requiredBy: []
-  timestamp: '2023-04-16 00:09:47+09:00'
+  timestamp: '2023-04-21 21:09:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify-code/yosupojudge/graph/LowestCommonAncestor.test.cpp

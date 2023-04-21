@@ -36,13 +36,23 @@ data:
     using namespace std;\ntemplate<typename T>\nostream &operator<<(ostream &os,const\
     \ vector<T>&v) {\n    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i]<<(i!=(int)v.size()-1?\"\
     \ \" : \"\");\n    }\n    return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
-    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\n"
+    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\ntemplate<typename\
+    \ T,typename S>\nostream &operator<<(ostream &os,const vector<pair<T,S>>&v) {\n\
+    \    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i].first<<\" \"<<v[i].second<<endl;\n\
+    \    }\n    return os;\n}\ntemplate<typename T,typename S>\nistream &operator>>(istream\
+    \ &is,vector<pair<T,S>>&v) {\n    for(auto &in:v)is>>in.first>>in.second;\n  \
+    \  return is;\n}\n"
   code: "#pragma once\n#include<bits/stdc++.h>\n#include \"template/template_func.hpp\"\
     \nusing ll = long long;\nconst ll llmx_0 = 1152921504606846976;\nusing namespace\
     \ std;\ntemplate<typename T>\nostream &operator<<(ostream &os,const vector<T>&v)\
     \ {\n    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i]<<(i!=(int)v.size()-1?\"\
     \ \" : \"\");\n    }\n    return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
-    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}"
+    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\ntemplate<typename\
+    \ T,typename S>\nostream &operator<<(ostream &os,const vector<pair<T,S>>&v) {\n\
+    \    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i].first<<\" \"<<v[i].second<<endl;\n\
+    \    }\n    return os;\n}\ntemplate<typename T,typename S>\nistream &operator>>(istream\
+    \ &is,vector<pair<T,S>>&v) {\n    for(auto &in:v)is>>in.first>>in.second;\n  \
+    \  return is;\n}"
   dependsOn:
   - zatu/template/template_func.hpp
   isVerificationFile: false
@@ -52,7 +62,7 @@ data:
   - graph/shortest-path/dijkstra.hpp
   - graph/template/no_weight_tree.hpp
   - graph/template/weighted_graph.hpp
-  timestamp: '2023-04-09 13:40:17+09:00'
+  timestamp: '2023-04-21 21:09:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify-code/yosupojudge/graph/LowestCommonAncestor.test.cpp

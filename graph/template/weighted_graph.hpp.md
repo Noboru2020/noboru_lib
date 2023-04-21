@@ -27,11 +27,16 @@ data:
     using namespace std;\ntemplate<typename T>\nostream &operator<<(ostream &os,const\
     \ vector<T>&v) {\n    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i]<<(i!=(int)v.size()-1?\"\
     \ \" : \"\");\n    }\n    return os;\n}\ntemplate<typename T>\nistream &operator>>(istream\
-    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\n#line 3 \"graph/template/weighted_graph.hpp\"\
-    \ntemplate<class T = int>struct weight_edge{\n    int from;\n    int to;\n   \
-    \ T cost;\n    int idx;\n    weight_edge(int t,const T &c)\n    :to(t),cost(c){}\n\
-    \    weight_edge(int f,int t,const T &c,int i=-1)\n    :from(f),to(t),cost(c),idx(i){}\n\
-    \    operator int() const{return to;}\n};\ntemplate<class T=int>using graph_w=std::vector<std::vector<weight_edge<T>>>;\n"
+    \ &is,vector<T>&v) {\n    for(T &in:v)is>>in;\n    return is;\n}\ntemplate<typename\
+    \ T,typename S>\nostream &operator<<(ostream &os,const vector<pair<T,S>>&v) {\n\
+    \    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i].first<<\" \"<<v[i].second<<endl;\n\
+    \    }\n    return os;\n}\ntemplate<typename T,typename S>\nistream &operator>>(istream\
+    \ &is,vector<pair<T,S>>&v) {\n    for(auto &in:v)is>>in.first>>in.second;\n  \
+    \  return is;\n}\n#line 3 \"graph/template/weighted_graph.hpp\"\ntemplate<class\
+    \ T = int>struct weight_edge{\n    int from;\n    int to;\n    T cost;\n    int\
+    \ idx;\n    weight_edge(int t,const T &c)\n    :to(t),cost(c){}\n    weight_edge(int\
+    \ f,int t,const T &c,int i=-1)\n    :from(f),to(t),cost(c),idx(i){}\n    operator\
+    \ int() const{return to;}\n};\ntemplate<class T=int>using graph_w=std::vector<std::vector<weight_edge<T>>>;\n"
   code: "#pragma once\n#include \"../../zatu/benri.hpp\"\ntemplate<class T = int>struct\
     \ weight_edge{\n    int from;\n    int to;\n    T cost;\n    int idx;\n    weight_edge(int\
     \ t,const T &c)\n    :to(t),cost(c){}\n    weight_edge(int f,int t,const T &c,int\
@@ -44,7 +49,7 @@ data:
   path: graph/template/weighted_graph.hpp
   requiredBy:
   - graph/shortest-path/dijkstra.hpp
-  timestamp: '2023-04-16 00:09:47+09:00'
+  timestamp: '2023-04-21 21:09:20+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify-code/yosupojudge/graph/dijkstra.test.cpp
