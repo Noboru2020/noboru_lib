@@ -16,3 +16,15 @@ istream &operator>>(istream &is,vector<T>&v) {
     for(T &in:v)is>>in;
     return is;
 }
+template<typename T,typename S>
+ostream &operator<<(ostream &os,const vector<pair<T,S>>&v) {
+    for(int i=0;i<(int)v.size();i++) {
+        os<<v[i].first<<" "<<v[i].second<<endl;
+    }
+    return os;
+}
+template<typename T,typename S>
+istream &operator>>(istream &is,vector<pair<T,S>>&v) {
+    for(auto &in:v)is>>in.first>>in.second;
+    return is;
+}
