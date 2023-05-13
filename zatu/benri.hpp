@@ -2,6 +2,7 @@
 #include<bits/stdc++.h>
 #include "template/template_func.hpp"
 using ll = long long;
+using ld = long double;
 const ll llmx_0 = 1152921504606846976;
 using namespace std;
 template<typename T>
