@@ -59,11 +59,11 @@ data:
   isVerificationFile: false
   path: zatu/template/template_func.hpp
   requiredBy:
+  - zatu/benri.hpp
   - graph/tree/LowestCommonAncestor.hpp
-  - graph/shortest-path/dijkstra.hpp
   - graph/template/no_weight_tree.hpp
   - graph/template/weighted_graph.hpp
-  - zatu/benri.hpp
+  - graph/shortest-path/dijkstra.hpp
   timestamp: '2023-03-30 14:37:37+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
