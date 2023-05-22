@@ -41,7 +41,19 @@ data:
     \ &os,const vector<pair<T,S>>&v) {\n    for(int i=0;i<(int)v.size();i++) {\n \
     \       os<<v[i].first<<\" \"<<v[i].second<<endl;\n    }\n    return os;\n}\n\
     template<typename T,typename S>\nistream &operator>>(istream &is,vector<pair<T,S>>&v)\
-    \ {\n    for(auto &in:v)is>>in.first>>in.second;\n    return is;\n}\n"
+    \ {\n    for(auto &in:v)is>>in.first>>in.second;\n    return is;\n}\n#define overload4(_1,\
+    \ _2, _3, _4, name, ...) name\n#define rep1(n) for(ll i = 0; i < (n); ++i)\n#define\
+    \ rep2(i, n) for(ll i = 0; i < (n); ++i)\n#define rep3(i, a, b) for(ll i = (a);\
+    \ i < (b); ++i)\n#define rep4(i, a, b, c) for(ll i = (a); i < (b); i += (c))\n\
+    #define rep(...) overload4(__VA_ARGS__, rep4, rep3, rep2, rep1)(__VA_ARGS__)\n\
+    #define overload4(_1, _2, _3, _4, name, ...) name\n#define rep1(n) for(ll i =\
+    \ 0; i < (n); ++i)\n#define rep2(i, n) for(ll i = 0; i < (n); ++i)\n#define rep3(i,\
+    \ a, b) for(ll i = (a); i < (b); ++i)\n#define rep4(i, a, b, c) for(ll i = (a);\
+    \ i < (b); i += (c))\n#define rep(...) overload4(__VA_ARGS__, rep4, rep3, rep2,\
+    \ rep1)(__VA_ARGS__)\n#define per1(n) for(ll i=(n);i>=0;--i)\n#define per2(i,n)\
+    \ for(ll i=(n);i>=0;--i)\n#define per3(i,a,b) for(ll i=(a);i>=(b);--i)\n#define\
+    \ per4(i,a,b,c) for(ll i=(a);i>=(b);i-=(c))\n#define per(...) overload4(__VA_ARGS__,\
+    \ per4, per3, per2, per1)(__VA_ARGS__)\n"
   code: "#pragma once\n#include<bits/stdc++.h>\n#include \"template/template_func.hpp\"\
     \nusing ll = long long;\nusing ld = long double;\nconst ll llmx_0 = 1152921504606846976;\n\
     using namespace std;\ntemplate<typename T>\nostream &operator<<(ostream &os,const\
@@ -52,7 +64,18 @@ data:
     \    for(int i=0;i<(int)v.size();i++) {\n        os<<v[i].first<<\" \"<<v[i].second<<endl;\n\
     \    }\n    return os;\n}\ntemplate<typename T,typename S>\nistream &operator>>(istream\
     \ &is,vector<pair<T,S>>&v) {\n    for(auto &in:v)is>>in.first>>in.second;\n  \
-    \  return is;\n}"
+    \  return is;\n}\n#define overload4(_1, _2, _3, _4, name, ...) name\n#define rep1(n)\
+    \ for(ll i = 0; i < (n); ++i)\n#define rep2(i, n) for(ll i = 0; i < (n); ++i)\n\
+    #define rep3(i, a, b) for(ll i = (a); i < (b); ++i)\n#define rep4(i, a, b, c)\
+    \ for(ll i = (a); i < (b); i += (c))\n#define rep(...) overload4(__VA_ARGS__,\
+    \ rep4, rep3, rep2, rep1)(__VA_ARGS__)\n#define overload4(_1, _2, _3, _4, name,\
+    \ ...) name\n#define rep1(n) for(ll i = 0; i < (n); ++i)\n#define rep2(i, n) for(ll\
+    \ i = 0; i < (n); ++i)\n#define rep3(i, a, b) for(ll i = (a); i < (b); ++i)\n\
+    #define rep4(i, a, b, c) for(ll i = (a); i < (b); i += (c))\n#define rep(...)\
+    \ overload4(__VA_ARGS__, rep4, rep3, rep2, rep1)(__VA_ARGS__)\n#define per1(n)\
+    \ for(ll i=(n);i>=0;--i)\n#define per2(i,n) for(ll i=(n);i>=0;--i)\n#define per3(i,a,b)\
+    \ for(ll i=(a);i>=(b);--i)\n#define per4(i,a,b,c) for(ll i=(a);i>=(b);i-=(c))\n\
+    #define per(...) overload4(__VA_ARGS__, per4, per3, per2, per1)(__VA_ARGS__)"
   dependsOn:
   - zatu/template/template_func.hpp
   isVerificationFile: false
@@ -62,7 +85,7 @@ data:
   - graph/template/no_weight_tree.hpp
   - graph/template/weighted_graph.hpp
   - graph/shortest-path/dijkstra.hpp
-  timestamp: '2023-05-14 00:37:48+09:00'
+  timestamp: '2023-05-22 18:45:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify-code/yosupojudge/graph/LowestCommonAncestor.test.cpp

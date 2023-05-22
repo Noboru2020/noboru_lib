@@ -32,10 +32,21 @@ data:
     \ &os,const vector<pair<T,S>>&v) {\n    for(int i=0;i<(int)v.size();i++) {\n \
     \       os<<v[i].first<<\" \"<<v[i].second<<endl;\n    }\n    return os;\n}\n\
     template<typename T,typename S>\nistream &operator>>(istream &is,vector<pair<T,S>>&v)\
-    \ {\n    for(auto &in:v)is>>in.first>>in.second;\n    return is;\n}\n#line 3 \"\
-    graph/template/no_weight_tree.hpp\"\ntemplate<class T = int>struct no_weight_tree{\n\
-    \    std::vector<std::vector<T>>no_weight_tree_graph;\n    no_weight_tree(int\
-    \ N):no_weight_tree_graph(N){};\n    void build__noweight_tree_input_edge(bool\
+    \ {\n    for(auto &in:v)is>>in.first>>in.second;\n    return is;\n}\n#define overload4(_1,\
+    \ _2, _3, _4, name, ...) name\n#define rep1(n) for(ll i = 0; i < (n); ++i)\n#define\
+    \ rep2(i, n) for(ll i = 0; i < (n); ++i)\n#define rep3(i, a, b) for(ll i = (a);\
+    \ i < (b); ++i)\n#define rep4(i, a, b, c) for(ll i = (a); i < (b); i += (c))\n\
+    #define rep(...) overload4(__VA_ARGS__, rep4, rep3, rep2, rep1)(__VA_ARGS__)\n\
+    #define overload4(_1, _2, _3, _4, name, ...) name\n#define rep1(n) for(ll i =\
+    \ 0; i < (n); ++i)\n#define rep2(i, n) for(ll i = 0; i < (n); ++i)\n#define rep3(i,\
+    \ a, b) for(ll i = (a); i < (b); ++i)\n#define rep4(i, a, b, c) for(ll i = (a);\
+    \ i < (b); i += (c))\n#define rep(...) overload4(__VA_ARGS__, rep4, rep3, rep2,\
+    \ rep1)(__VA_ARGS__)\n#define per1(n) for(ll i=(n);i>=0;--i)\n#define per2(i,n)\
+    \ for(ll i=(n);i>=0;--i)\n#define per3(i,a,b) for(ll i=(a);i>=(b);--i)\n#define\
+    \ per4(i,a,b,c) for(ll i=(a);i>=(b);i-=(c))\n#define per(...) overload4(__VA_ARGS__,\
+    \ per4, per3, per2, per1)(__VA_ARGS__)\n#line 3 \"graph/template/no_weight_tree.hpp\"\
+    \ntemplate<class T = int>struct no_weight_tree{\n    std::vector<std::vector<T>>no_weight_tree_graph;\n\
+    \    no_weight_tree(int N):no_weight_tree_graph(N){};\n    void build__noweight_tree_input_edge(bool\
     \ one_indexed,bool twoway){\n        int M=no_weight_tree_graph.size();\n    \
     \    for(int i=0;i<M-1;i++){\n            int a,b;cin>>a>>b;\n            if(one_indexed){\n\
     \                a--;b--;\n            }\n            no_weight_tree_graph[a].push_back(b);\n\
@@ -56,7 +67,7 @@ data:
   path: graph/template/no_weight_tree.hpp
   requiredBy:
   - graph/tree/LowestCommonAncestor.hpp
-  timestamp: '2023-05-14 00:37:48+09:00'
+  timestamp: '2023-05-22 18:45:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify-code/yosupojudge/graph/LowestCommonAncestor.test.cpp

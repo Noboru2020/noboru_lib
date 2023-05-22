@@ -32,12 +32,23 @@ data:
     \ &os,const vector<pair<T,S>>&v) {\n    for(int i=0;i<(int)v.size();i++) {\n \
     \       os<<v[i].first<<\" \"<<v[i].second<<endl;\n    }\n    return os;\n}\n\
     template<typename T,typename S>\nistream &operator>>(istream &is,vector<pair<T,S>>&v)\
-    \ {\n    for(auto &in:v)is>>in.first>>in.second;\n    return is;\n}\n#line 3 \"\
-    graph/template/weighted_graph.hpp\"\ntemplate<class T = int>struct weight_edge{\n\
-    \    int from;\n    int to;\n    T cost;\n    int idx;\n    weight_edge(int t,const\
-    \ T &c)\n    :to(t),cost(c){}\n    weight_edge(int f,int t,const T &c,int i=-1)\n\
-    \    :from(f),to(t),cost(c),idx(i){}\n    operator int() const{return to;}\n};\n\
-    template<class T=int>using graph_w=std::vector<std::vector<weight_edge<T>>>;\n"
+    \ {\n    for(auto &in:v)is>>in.first>>in.second;\n    return is;\n}\n#define overload4(_1,\
+    \ _2, _3, _4, name, ...) name\n#define rep1(n) for(ll i = 0; i < (n); ++i)\n#define\
+    \ rep2(i, n) for(ll i = 0; i < (n); ++i)\n#define rep3(i, a, b) for(ll i = (a);\
+    \ i < (b); ++i)\n#define rep4(i, a, b, c) for(ll i = (a); i < (b); i += (c))\n\
+    #define rep(...) overload4(__VA_ARGS__, rep4, rep3, rep2, rep1)(__VA_ARGS__)\n\
+    #define overload4(_1, _2, _3, _4, name, ...) name\n#define rep1(n) for(ll i =\
+    \ 0; i < (n); ++i)\n#define rep2(i, n) for(ll i = 0; i < (n); ++i)\n#define rep3(i,\
+    \ a, b) for(ll i = (a); i < (b); ++i)\n#define rep4(i, a, b, c) for(ll i = (a);\
+    \ i < (b); i += (c))\n#define rep(...) overload4(__VA_ARGS__, rep4, rep3, rep2,\
+    \ rep1)(__VA_ARGS__)\n#define per1(n) for(ll i=(n);i>=0;--i)\n#define per2(i,n)\
+    \ for(ll i=(n);i>=0;--i)\n#define per3(i,a,b) for(ll i=(a);i>=(b);--i)\n#define\
+    \ per4(i,a,b,c) for(ll i=(a);i>=(b);i-=(c))\n#define per(...) overload4(__VA_ARGS__,\
+    \ per4, per3, per2, per1)(__VA_ARGS__)\n#line 3 \"graph/template/weighted_graph.hpp\"\
+    \ntemplate<class T = int>struct weight_edge{\n    int from;\n    int to;\n   \
+    \ T cost;\n    int idx;\n    weight_edge(int t,const T &c)\n    :to(t),cost(c){}\n\
+    \    weight_edge(int f,int t,const T &c,int i=-1)\n    :from(f),to(t),cost(c),idx(i){}\n\
+    \    operator int() const{return to;}\n};\ntemplate<class T=int>using graph_w=std::vector<std::vector<weight_edge<T>>>;\n"
   code: "#pragma once\n#include \"../../zatu/benri.hpp\"\ntemplate<class T = int>struct\
     \ weight_edge{\n    int from;\n    int to;\n    T cost;\n    int idx;\n    weight_edge(int\
     \ t,const T &c)\n    :to(t),cost(c){}\n    weight_edge(int f,int t,const T &c,int\
@@ -50,7 +61,7 @@ data:
   path: graph/template/weighted_graph.hpp
   requiredBy:
   - graph/shortest-path/dijkstra.hpp
-  timestamp: '2023-05-14 00:37:48+09:00'
+  timestamp: '2023-05-22 18:45:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - verify-code/yosupojudge/graph/dijkstra.test.cpp
