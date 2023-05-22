@@ -29,3 +29,20 @@ istream &operator>>(istream &is,vector<pair<T,S>>&v) {
     for(auto &in:v)is>>in.first>>in.second;
     return is;
 }
+#define overload4(_1, _2, _3, _4, name, ...) name
+#define rep1(n) for(ll i = 0; i < (n); ++i)
+#define rep2(i, n) for(ll i = 0; i < (n); ++i)
+#define rep3(i, a, b) for(ll i = (a); i < (b); ++i)
+#define rep4(i, a, b, c) for(ll i = (a); i < (b); i += (c))
+#define rep(...) overload4(__VA_ARGS__, rep4, rep3, rep2, rep1)(__VA_ARGS__)
+#define overload4(_1, _2, _3, _4, name, ...) name
+#define rep1(n) for(ll i = 0; i < (n); ++i)
+#define rep2(i, n) for(ll i = 0; i < (n); ++i)
+#define rep3(i, a, b) for(ll i = (a); i < (b); ++i)
+#define rep4(i, a, b, c) for(ll i = (a); i < (b); i += (c))
+#define rep(...) overload4(__VA_ARGS__, rep4, rep3, rep2, rep1)(__VA_ARGS__)
+#define per1(n) for(ll i=(n);i>=0;--i)
+#define per2(i,n) for(ll i=(n);i>=0;--i)
+#define per3(i,a,b) for(ll i=(a);i>=(b);--i)
+#define per4(i,a,b,c) for(ll i=(a);i>=(b);i-=(c))
+#define per(...) overload4(__VA_ARGS__, per4, per3, per2, per1)(__VA_ARGS__)
